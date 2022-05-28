@@ -1,10 +1,10 @@
 import './App.css';
-import Grid from './components/Grid';
+import UserInput from './components/UserInput';
 
 export default function App() {
   return (
     <div className="App">
-      <Grid />
+      <UserInput />
     </div>
   );
 }
