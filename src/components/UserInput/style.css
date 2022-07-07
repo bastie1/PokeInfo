@@ -13,6 +13,15 @@
   margin-top: 35px;
 }
 
-input[type="text"] {
-  text-align: center;
+  input[type="text"] {
+    text-align: center;
+  }
+
+#card {
+  display: flex;
+  border-width: 1px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 40px;
+  padding: 8px;
 }
