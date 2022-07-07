@@ -4,38 +4,39 @@ import { useState } from 'react'
 import { Button, Image } from '@chakra-ui/react'
 import { Input } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react'
-import { Alert, AlertIcon } from '@chakra-ui/react'
+import { type } from '@testing-library/user-event/dist/type';
+// import { Alert, AlertIcon } from '@chakra-ui/react'
 
 export default function UserInput() {
   const BASEURL = 'https://pokeapi.co/api/v2/pokemon/';
 
   // TODO: Estudar useState()
-  const [pokemonData, setPokemonData] = useState()
-  const [showAlert, setShowAlert] = useState(false)
+  const [pokemonData, setPokemonData] = useState();
+  // const [showAlert, setShowAlert] = useState(false);
 
   function getInputValue (pokemonName) {
-    const POKEMON = pokemonName.target[0].value
+    const POKEMON = pokemonName.target[0].value;
     const URL = BASEURL + POKEMON.toLowerCase();
-    console.log(pokemonName)
+    console.log(pokemonName);
     
     // FIXME: Modificar error case - substituir o window.alert por um pop-up na página
     if (!POKEMON) {
-      window.alert("Insira o nome de algum pokemon!")
-      return pokemonName.preventDefault()
-    }
+      window.alert("Insira o nome de algum pokémon!");
+      return pokemonName.preventDefault();
+    };
 
     axios.get(URL).then((res) => {
-      setPokemonData(res.data)
+      setPokemonData(res.data);
       console.log(pokemonData);
   }).catch(() => {
       // FIXME: Modificar error case - substituir o window.alert por um pop-up na página
-      // TODO: Devo continuar a utilizar o useState() para esse propósito?
+        // FIXME: Devo continuar a utilizar o useState() para esse propósito?
       // setShowAlert(true)
-      window.alert("Este pokemon não existe :(")
+      window.alert("Este não é um pokémon :(");
   });
 
     pokemonName.preventDefault();
-  }
+  };
 
   return(
     <div>
@@ -52,7 +53,11 @@ export default function UserInput() {
           *TODO: Incluir demais atributos do pokemon no card*/}
 
         {pokemonData ? 
-          <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' mt='10'>
+          <Box id="card">
+            <p id="pokemonName">{pokemonData.name}
+              <span className="pokemonId">#{pokemonData.id}</span>
+            </p>
+            <p id="pokemonType">{pokemonData.types.map(typeObject => typeObject.type.name).join(' ')}</p>
             <Image src={pokemonData.sprites.front_default}/>
           </Box> 
         : <></>}
@@ -74,5 +79,5 @@ export default function UserInput() {
         
       </main>
     </div>
-  ) 
-}
+  ); 
+};
