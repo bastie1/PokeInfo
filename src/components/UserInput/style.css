@@ -1,3 +1,11 @@
+/* @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  font-family: 'Press Start 2P', cursive;
+  /* border-color: black; */
+}
+
 #titleAndInput {
   display: flex;
   flex-direction: column;
@@ -7,21 +15,45 @@
   height: 100vh;
 }
 
-#inputAndButton {
-  display: flex;
-  flex-direction: column;
-  margin-top: 35px;
-}
-
-  input[type="text"] {
-    text-align: center;
+  #inputAndButton {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 50vw;
+    justify-content: space-around;
+    /* border: 1px solid black; */
   }
 
-#card {
-  display: flex;
-  border-width: 1px;
-  border-radius: 5px;
-  overflow: hidden;
-  margin-top: 40px;
-  padding: 8px;
-}
+    input[type="text"] {
+      text-align: center;
+    }
+    
+    #search {
+      border-color: black;
+    }
+
+  #card {
+    display: flex;
+    border-width: 1px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 40px;
+    padding: 8px;
+    /* border: 1px solid red; */
+  }
+
+    p#pokemonName {
+      border: 1px solid red;
+    }
+
+    #pokemonId {
+      border: 1px solid red;
+    }
+
+    p#pokemonType {
+      border: 1px solid red;
+    }
+
+    #pokemonImage {
+      border: 1px solid red;
+    }
