@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { Button, Image } from '@chakra-ui/react'
 import { Input } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react'
-import { type } from '@testing-library/user-event/dist/type';
 // import { Alert, AlertIcon } from '@chakra-ui/react'
 
 export default function UserInput() {
@@ -58,7 +57,7 @@ export default function UserInput() {
               <span className="pokemonId">#{pokemonData.id}</span>
             </p>
             <p id="pokemonType">{pokemonData.types.map(typeObject => typeObject.type.name).join(' ')}</p>
-            <Image src={pokemonData.sprites.front_default}/>
+            <Image src={pokemonData.sprites.front_default}/> {/* Add alt */}
           </Box> 
         : <></>}
 
