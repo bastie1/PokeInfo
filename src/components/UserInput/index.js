@@ -55,7 +55,7 @@ export default function UserInput() {
             <p id="pokemonName">{pokemonData.name}</p>
             <p id="pokemonId">#{pokemonData.id}</p>
             <p id="pokemonType">{pokemonData.types.map(types => types.type.name).join(' ')}</p>
-            <Image id ="pokemonImage" src={pokemonData.sprites.front_default}/>
+            <Image id ="pokemonImage" src={pokemonData.sprites.front_default}/> {/* Add alt */}
           </Box> 
         : <></>}
 
