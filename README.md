@@ -1,20 +1,23 @@
 # PokeInfo
 
-Esta é uma aplicação web (SPA) desenvolvida em ReactJS que providencia informações sobre qualquer Pokémon.
+Esta é uma aplicação web (SPA) que providencia informações sobre qualquer Pokémon.
 
-<h4 align="center">
-	Status: 🚧 Em construção
-</h4>
+## Status 
 
-<p align="center">
-	<a href="#sobre">Sobre</a> •
-	<a href="#tech-stack">Tech Stack</a> •
-	<a href="#contato">Contato</a> 
-</p>
+**🚧 Em desenvolvimento**
+
+
+<a href="#sobre">Sobre</a> •
+<a href="#tech-stack">Tech Stack</a> •
+<a href="#contato">Contato</a> 
 
 ## Sobre
 
-A aplicação interage diretamente com a PokéAPI, consumindo-a e retornando informações sobre o que foi inserido pelo usuário. Caso tenha sido o nome de algum Pokémon, ela mostrará um card na tela contendo informações sobre o mesmo. Caso contrário, apresentará uma mensagem informando não ter sido um Pokémon.
+A aplicação interage diretamente com a [PokéAPI](https://pokeapi.co/), consumindo-a e retornando informações sobre o que foi inserido pelo usuário. Caso tenha sido o nome de algum Pokémon, ela mostrará um card na tela contendo informações sobre o mesmo. Caso contrário, apresentará uma mensagem informando não ter sido um Pokémon.
+
+## Como utilizar
+
+Basta inserir o nome de algum Pokémon no campo indicado e pressionar `Enter` ou clicar no botão `Catch!`
 
 ## Tech Stack
 
