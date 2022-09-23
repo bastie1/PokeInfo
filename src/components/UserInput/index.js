@@ -1,9 +1,7 @@
 import './style.css';
 import axios from 'axios';
 import { useState } from 'react'
-import { Button, Image } from '@chakra-ui/react'
-import { Input } from '@chakra-ui/react'
-import { Box } from '@chakra-ui/react'
+import { Button, Image, Input, Box } from '@chakra-ui/react'
 // import { Alert, AlertIcon } from '@chakra-ui/react'
 
 export default function UserInput() {
@@ -18,18 +16,12 @@ export default function UserInput() {
     const POKEMON = pokemonName.target[0].value;
     const URL = BASEURL + POKEMON.toLowerCase();
     console.log(pokemonName); // Retirar ao finalizar projeto
-    
-    // FIXME: Modificar error case - substituir o window.alert por um pop-up na página
-    if (!POKEMON) {
-      window.alert("Insira o nome de algum pokémon!");
-      return pokemonName.preventDefault();
-    };
 
     axios.get(URL).then((response) => {
       setPokemonData(response.data);
       console.log(pokemonData); // Retirar ao finalizar projeto
     }).catch(() => {
-      // FIXME: Modificar error case - substituir o window.alert por um pop-up na página
+      // TODO: Modificar error case - substituir o window.alert por um pop-up na página
         // FIXME: Devo continuar a utilizar o useState() para esse propósito?
       // setShowAlert(true)
       window.alert("Este não é um pokémon :(");
@@ -44,7 +36,7 @@ export default function UserInput() {
 
         <form id="inputAndButton" onSubmit={getUserInputValue}>
           {/* FIXME: Alterar design para melhorar o contraste */}
-          <Input id="userInput" type="text" placeholder="Nome do Pokémon"/>
+          <Input id="userInput" type="text" placeholder="Nome do Pokémon" required/>
           <Button id="search" type="submit" variant="outline">Catch!</Button>
         </form>
 
@@ -55,7 +47,7 @@ export default function UserInput() {
             <p id="pokemonName">{pokemonData.name}</p>
             <p id="pokemonId">#{pokemonData.id}</p>
             <p id="pokemonType">{pokemonData.types.map(types => types.type.name).join(' ')}</p>
-            <Image id ="pokemonImage" src={pokemonData.sprites.front_default}/> {/* Add alt */}
+            <Image id="pokemonImage" src={pokemonData.sprites.front_default} alt="Pokémon sprite"/> {/* Add alt */}
           </Box> 
         : <></>}
 
