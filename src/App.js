@@ -1,10 +1,10 @@
 import './App.css';
-import UserInput from './components/UserInput';
+import UserInputAndCard from './components/UserInputAndCard';
 
 export default function App() {
   return (
     <div className="App">
-      <UserInput />
+      <UserInputAndCard />
     </div>
   );
 }
