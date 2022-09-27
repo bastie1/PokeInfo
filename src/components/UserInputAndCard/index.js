@@ -1,10 +1,10 @@
 import './style.css';
 import axios from 'axios';
 import { useState } from 'react'
-import { Button, Image, Input, Box } from '@chakra-ui/react'
+import { Button, Input, Box } from '@chakra-ui/react'
 // import { Alert, AlertIcon } from '@chakra-ui/react'
 
-export default function UserInput() {
+export default function UserInputAndCard() {
   // API Endpoint
   const BASEURL = 'https://pokeapi.co/api/v2/pokemon/';
 
@@ -31,23 +31,23 @@ export default function UserInput() {
   };
 
   return(
-      <main id="titleAndInput">
-        <img src="/assets/images/Pokeinfo.png" alt="PokeInfo"/>
+      <main id="logoFormCard">
+
+        <img id="logo" src="/assets/images/Pokeinfo.png" alt="PokeInfo Logo"/>
 
         <form id="inputAndButton" onSubmit={getUserInputValue}>
           {/* FIXME: Alterar design para melhorar o contraste */}
           <Input id="userInput" type="text" placeholder="Nome do Pokémon" required/>
-          <Button id="search" type="submit" variant="outline">Catch!</Button>
+          <Button id="searchButton" type="submit" variant="outline">Catch!</Button>
         </form>
 
         {/*TODO: Transformar o card num componente para tornar o código mais readable*/}
-
         {pokemonData ? 
           <Box id="card">
             <p id="pokemonName">{pokemonData.name}</p>
             <p id="pokemonId">#{pokemonData.id}</p>
             <p id="pokemonType">{pokemonData.types.map(types => types.type.name).join(' ')}</p>
-            <Image id="pokemonImage" src={pokemonData.sprites.front_default} alt="Pokémon sprite"/> {/* Add alt */}
+            <img id="pokemonImage" src={pokemonData.sprites.front_default} alt="Pokémon sprite"/> {/* Add alt */}
           </Box> 
         : <></>}
 
