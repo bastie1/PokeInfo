@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Button, Input, Box } from '@chakra-ui/react'
 // import { Alert, AlertIcon } from '@chakra-ui/react'
 
+// TODO: Renomear componente para LogoAndForm
 export default function UserInputAndCard() {
   // API Endpoint
   const BASEURL = 'https://pokeapi.co/api/v2/pokemon/';
@@ -17,7 +18,7 @@ export default function UserInputAndCard() {
     const URL = BASEURL + POKEMON.toLowerCase();
     console.log(pokemonName); // Retirar ao finalizar projeto
 
-    axios.get(URL).then((response) => {
+    axios.get(URL).then(response => {
       setPokemonData(response.data);
       console.log(pokemonData); // Retirar ao finalizar projeto
     }).catch(() => {
@@ -36,18 +37,27 @@ export default function UserInputAndCard() {
         <img id="logo" src="/assets/images/Pokeinfo.png" alt="PokeInfo Logo"/>
 
         <form id="inputAndButton" onSubmit={getUserInputValue}>
-          {/* FIXME: Alterar design para melhorar o contraste */}
           <Input id="userInput" type="text" placeholder="Nome do Pokémon" required/>
           <Button id="searchButton" type="submit" variant="outline">Catch!</Button>
         </form>
 
         {/*TODO: Transformar o card num componente para tornar o código mais readable*/}
+        {/* TODO: Incluir o <Card /> como corpo da condição abaixo */}
         {pokemonData ? 
           <Box id="card">
-            <p id="pokemonName">{pokemonData.name}</p>
-            <p id="pokemonId">#{pokemonData.id}</p>
-            <p id="pokemonType">{pokemonData.types.map(types => types.type.name).join(' ')}</p>
-            <img id="pokemonImage" src={pokemonData.sprites.front_default} alt="Pokémon sprite"/> {/* Add alt */}
+            <div id="nameAndId">
+              <p id="pokemonName">{pokemonData.name}</p>
+              <p id="pokemonId">#{pokemonData.id}</p>
+            </div>
+
+            <div id="typesAndImg">
+              <p id="pokemonTypes">
+                {pokemonData.types
+                .map(types => types.type.name)
+                .join('\n')}
+              </p>
+              <img id="pokemonImg" src={pokemonData.sprites.front_default} alt="Pokémon sprite"/>
+            </div>
           </Box> 
         : <></>}
 
