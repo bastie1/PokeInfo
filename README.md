@@ -2,24 +2,28 @@
 
 Esta é uma aplicação web (SPA) que providencia informações sobre qualquer Pokémon.
 
-## Status 
+## Tabela de Conteúdos
 
-**🚧 Em desenvolvimento**
+- [Visão geral](#visão-geral)
+  - [Sobre](#sobre)
+  - [Imagens](#imagens)
+  - [Como utilizar](#como-utilizar)
+- [Tecnologias e ferramentas](#tecnologias-e-ferramentas)
+- [Contato](#contato)
 
+## Visão Geral
 
-<a href="#sobre">Sobre</a> •
-<a href="#tech-stack">Tech Stack</a> •
-<a href="#contato">Contato</a> 
-
-## Sobre
+### Sobre
 
 A aplicação interage diretamente com a [PokéAPI](https://pokeapi.co/), consumindo-a e retornando informações sobre o que foi inserido pelo usuário. Caso tenha sido o nome de algum Pokémon, ela mostrará um card na tela contendo informações sobre o mesmo. Caso contrário, apresentará uma mensagem informando não ter sido um Pokémon.
 
-## Como utilizar
+### Imagens
+
+### Como utilizar
 
 Basta inserir o nome de algum Pokémon no campo indicado e pressionar `Enter` ou clicar no botão `Catch!`
 
-## Tech Stack
+## Tecnologias e ferramentas
 
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="react Badge">&nbsp;
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html5 Badge">&nbsp;
