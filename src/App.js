@@ -1,6 +1,6 @@
 import './App.css';
-import UserInputAndCard from './components/UserInputAndCard/userInputAndCard.js';
-import Footer from './components/Footer/footer.js'
+import UserInputAndCard from './components/UserInputAndCard/userInputAndCard';
+import Footer from './components/Footer/footer'
 
 export default function App() {
   return (
