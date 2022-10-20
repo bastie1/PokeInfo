@@ -18,7 +18,7 @@ Esta é uma aplicação web (SPA) que providencia informações sobre qualquer P
 A aplicação interage diretamente com a [PokéAPI](https://pokeapi.co/), consumindo-a e retornando informações sobre o que foi inserido pelo usuário. Caso tenha sido o nome de algum Pokémon, ela mostrará um card na tela contendo informações sobre o mesmo. Caso contrário, apresentará uma mensagem informando não ter sido um Pokémon.
 
 ### Imagens
-![Pokeinfo App](public\assets\images\pokeinfo-mobile.png "Aplicativo mobile")
+![Pokeinfo App](public/assets/images/pokeinfo-mobile.png "Aplicativo mobile")
 
 ### Como rodar
 
