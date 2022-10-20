@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.css';
+import './footer.css';
 
 export default function Footer() {
   return (
@@ -7,7 +7,7 @@ export default function Footer() {
       <p>
         Dados extraídos da <a href="https://pokeapi.co/" target="_blank" rel="noreferrer">PokeAPI</a>
       </p>
-      <p>Feito com ❤ por Gabriel Bastos!</p>
+      <p>Feito com <span>❤</span> por Gabriel Bastos!</p>
     </footer>
   )
 }

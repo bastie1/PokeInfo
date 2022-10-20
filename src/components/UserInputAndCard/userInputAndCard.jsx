@@ -1,4 +1,4 @@
-import './style.css';
+import './userInputAndCard.css';
 import axios from 'axios';
 import { useState } from 'react'
 import { Button, Input, Box } from '@chakra-ui/react'
@@ -13,11 +13,11 @@ export default function UserInputAndCard() {
   const [pokemonData, setPokemonData] = useState();
   // const [showAlert, setShowAlert] = useState(false);
 
-  function getUserInputValue (pokemonName) {
+  function getUserInputValueAndMakeRequest (pokemonName) {
     const POKEMON = pokemonName.target[0].value;
     const URL = BASEURL + POKEMON.toLowerCase();
     console.log(pokemonName); // Retirar ao finalizar projeto
-
+    
     axios.get(URL).then(response => {
       setPokemonData(response.data);
       console.log(pokemonData); // Retirar ao finalizar projeto
@@ -32,17 +32,17 @@ export default function UserInputAndCard() {
   };
 
   return(
-      <main id="logoFormCard">
+      <section id="logoFormCard">
 
-        <img id="logo" src="/assets/images/Pokeinfo.png" alt="PokeInfo Logo"/>
+        <img id="logo" src="/assets/images/logo/Pokeinfo.png" alt="PokeInfo Logo"/>
 
-        <form id="inputAndButton" onSubmit={getUserInputValue}>
-          <Input id="userInput" type="text" placeholder="Nome do Pokémon" required/>
+        <form id="inputAndButton" onSubmit={getUserInputValueAndMakeRequest}>
+          <Input id="userInput" type="text" variant="outline" placeholder="Nome do Pokémon" isRequired="true"/>
           <Button id="searchButton" type="submit" variant="outline">Catch!</Button>
         </form>
 
         {/*TODO: Transformar o card num componente para tornar o código mais readable*/}
-        {/* TODO: Incluir o <Card /> como corpo da condição abaixo */}
+        {/* TODO: Incluir o <Card /> como condição abaixo */}
         {pokemonData ? 
           <Box id="card">
             <div id="nameAndId">
@@ -75,6 +75,6 @@ export default function UserInputAndCard() {
         )}
         </> */}
         
-      </main>
+      </section>
   ); 
 };
