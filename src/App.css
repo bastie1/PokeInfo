@@ -2,8 +2,5 @@
 .App {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 382px;
-  height: 532px;
+  height: 100%;
 }
