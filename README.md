@@ -8,6 +8,7 @@ Esta é uma aplicação web (SPA) que providencia informações sobre qualquer P
   - [Sobre](#sobre)
   - [Imagens](#imagens)
   - [Como utilizar](#como-utilizar)
+- [Tasks](#tasks)
 - [Tecnologias e ferramentas](#tecnologias-e-ferramentas)
 - [Contato](#contato)
 
@@ -32,6 +33,7 @@ A aplicação interage diretamente com a [PokéAPI](https://pokeapi.co/), consum
 
 ## Tasks
 
+- [ ] Resolver bug com o layout quebrando verticalmente
 - [ ] Tornar o projeto responsivo para tablet e desktop
   - [ ] Resolver bug com a responsividade no modo paisagem
 - [ ] Aprimorar design do card
