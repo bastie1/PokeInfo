@@ -33,7 +33,7 @@ A aplicação interage diretamente com a [PokéAPI](https://pokeapi.co/), consum
 
 ## Tasks
 
-- [x] Resolver bug com o layout quebrando verticalmente
+- [x] ~Resolver bug com o layout quebrando verticalmente~
 - [ ] Posicionar o footer no final da página
 - [ ] Tornar o projeto responsivo para tablet e desktop
   - [ ] Resolver bug com a responsividade no modo paisagem
