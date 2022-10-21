@@ -36,10 +36,10 @@ export default function UserInputAndCard() {
 
         <img id="logo" src="/assets/images/logo/Pokeinfo.png" alt="PokeInfo Logo"/>
 
-        <form id="inputAndButton" onSubmit={getUserInputValueAndMakeRequest}>
+        <div id="inputAndButton" onSubmit={getUserInputValueAndMakeRequest}>
           <Input id="userInput" type="text" variant="outline" placeholder="Nome do Pokémon" isRequired="true"/>
           <Button id="searchButton" type="submit" variant="outline">Catch!</Button>
-        </form>
+        </div>
 
         {/*TODO: Transformar o card num componente para tornar o código mais readable*/}
         {/* TODO: Incluir o <Card /> como condição abaixo */}

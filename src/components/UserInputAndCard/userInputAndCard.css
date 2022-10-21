@@ -16,10 +16,9 @@
   height: inherit;
 }
 
-  form#inputAndButton {
+  div#inputAndButton {
     display: flex;
     flex-direction: column;
-  
   }
 
   img#logo {
